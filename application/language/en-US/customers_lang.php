@@ -52,3 +52,5 @@ $lang["customers_taxable"] = "Taxable";
 $lang["customers_total"] = "Total spent";
 $lang["customers_update"] = "Update Customer";
 $lang["rewards_package"] = "Rewards Package";
+$lang["customer_address"] = "Address";
+$lang["customer_phone"] = "Phone";

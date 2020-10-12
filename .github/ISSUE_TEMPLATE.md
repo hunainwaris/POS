@@ -4,7 +4,7 @@ __IMPORTANT: If you choose to ignore this issue report template, your issue will
 
 Please make sure you tick (add an x between the square brackets with no spaces) the following check boxes:
 
-- [] Reporting an issue of an unmodified OSPOS installation
+- [] Reporting an issue of an unmodified Tecnotronix installation
 - [] Checked [open and closed issues](https://github.com/opensourcepos/opensourcepos/issues?utf8=%E2%9C%93&q=is%3Aissue) and no similar issue was already reported (please make sure you searched!)
 - [] Read [README](https://github.com/opensourcepos/opensourcepos/blob/master/README.md), [WHATS_NEW](https://github.com/opensourcepos/opensourcepos/blob/master/WHATS_NEW.txt), [INSTALL.md](https://github.com/opensourcepos/opensourcepos/blob/master/INSTALL.md) and [UPGRADE](https://github.com/opensourcepos/opensourcepos/blob/master/UPGRADE.txt)
 - [] Read the [FAQ](https://github.com/opensourcepos/opensourcepos#faq) for any known install and/or upgrade gotchas (in specific PHP extensions installed)
@@ -14,8 +14,8 @@ Please make sure you tick (add an x between the square brackets with no spaces) 
 
 ### Installation information
 
-- OSPOS version is: 
-- OSPOS git commit hash is: 
+- Tecnotronix version is: 
+- Tecnotronix git commit hash is: 
 - PHP version is: 
 - MySQL or MariaDB version is: 
 - OS and version is: 

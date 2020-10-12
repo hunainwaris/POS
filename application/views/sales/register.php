@@ -29,6 +29,7 @@ if(isset($success))
 				</li>
 				<li class="pull-left">
 					<?php echo form_dropdown('mode', $modes, $mode, array('onchange'=>"$('#mode_form').submit();", 'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
+<!--                    --><?php //echo form_dropdown('all_users', $all_users, array(), array()); ?>
 				</li>
 				<?php
 				if($this->config->item('dinner_table_enable') == TRUE)
@@ -77,6 +78,13 @@ if(isset($success))
 		</div>
 	<?php echo form_close(); ?>
 
+    <?php echo form_open($controller_name."/complete", array('id'=>'select_user', 'class'=>'form-horizontal panel panel-default')); ?>
+<!--    <ul>-->
+<!--    <li>-->
+<!--        --><?php //echo form_dropdown('mode', $modes, $mode, array('onchange'=>"$('#mode_form').submit();", 'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
+        <?php echo form_dropdown('Employee', $this->Employee->get_name_of_all_employees(), $salesman, array('onchange'=>"$('#mode_form').submit();",'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
+    <?php echo form_close(); ?>
+<!--    --><?php //var_dump($this->Employee->get_name_of_all_employees());die(); ?>
 	<?php $tabindex = 0; ?>
 
 	<?php echo form_open($controller_name."/add", array('id'=>'add_item_form', 'class'=>'form-horizontal panel panel-default')); ?>

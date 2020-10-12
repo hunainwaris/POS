@@ -66,6 +66,6 @@ $lang["common_unknown"] = "Necunoscut";
 $lang["common_view_recent_sales"] = "Vedeți vânzările recente";
 $lang["common_website"] = "website";
 $lang["common_welcome"] = "Bine ați venit";
-$lang["common_welcome_message"] = "Bine ați venit la OSPOS, faceți clic pe un modul de mai jos pentru a începe.";
+$lang["common_welcome_message"] = "Bine ați venit la Tecnotronix, faceți clic pe un modul de mai jos pentru a începe.";
 $lang["common_you_are_using_ospos"] = "Folosiți Open Source Point Of Sale versiunea";
 $lang["common_zip"] = "Cod poștal";

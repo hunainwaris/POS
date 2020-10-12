@@ -66,6 +66,6 @@ $lang["common_unknown"] = "לא ידוע";
 $lang["common_view_recent_sales"] = "הצג מכירות אחרונות";
 $lang["common_website"] = "אתר";
 $lang["common_welcome"] = "ברוך הבא";
-$lang["common_welcome_message"] = "ברוכים הבאים אל OSPOS, לחץ על מודול למטה כדי להתחיל.";
+$lang["common_welcome_message"] = "ברוכים הבאים אל Tecnotronix, לחץ על מודול למטה כדי להתחיל.";
 $lang["common_you_are_using_ospos"] = "אתה משתמש בגירסת קוד פתוח של נקודת מכירה";
 $lang["common_zip"] = "מיקוד";

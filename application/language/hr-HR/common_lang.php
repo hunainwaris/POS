@@ -66,6 +66,6 @@ $lang["common_unknown"] = "";
 $lang["common_view_recent_sales"] = "Pogledaj nedavne prodaje";
 $lang["common_website"] = "web stranicu";
 $lang["common_welcome"] = "Dobrodošli";
-$lang["common_welcome_message"] = "Dobrodošli u blagajnu otvorenog koda(OSPOS)";
+$lang["common_welcome_message"] = "Dobrodošli u blagajnu otvorenog koda(TecnoTronix)";
 $lang["common_you_are_using_ospos"] = "Koristite blagajnu otvorenog koda (Open Source Point Of Sale) verziju";
 $lang["common_zip"] = "Broj pošte";

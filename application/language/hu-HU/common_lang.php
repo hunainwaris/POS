@@ -66,6 +66,6 @@ $lang["common_unknown"] = "";
 $lang["common_view_recent_sales"] = "Eladások megtekintése";
 $lang["common_website"] = "weboldalt";
 $lang["common_welcome"] = "Üdvözlet";
-$lang["common_welcome_message"] = "Üdvözli az OSPOS, kattintson a modulokra a kezdéshez!";
+$lang["common_welcome_message"] = "Üdvözli az Tecnotronix, kattintson a modulokra a kezdéshez!";
 $lang["common_you_are_using_ospos"] = "Ön az Open Source Point Of Sale alábbi verzióját használja";
 $lang["common_zip"] = "Ir.Szám";

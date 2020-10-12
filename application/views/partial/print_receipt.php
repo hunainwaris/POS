@@ -1,5 +1,5 @@
 <script type="text/javascript">
-function printdoc()
+    function printdoc()
 {
 	// install firefox addon in order to use this plugin
 	if (window.jsPrintSetup)

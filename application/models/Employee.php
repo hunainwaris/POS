@@ -497,5 +497,14 @@ class Employee extends Person
 
 		return $success;
 	}
+
+	public function get_name_of_all_employees()
+	{
+//		$this->db->select('username,person_id');
+		$this->db->select('person_id');
+		$this->db->from('employees');
+		$row= $this->db->get();
+		return $row->result_array();
+		}
 }
 ?>

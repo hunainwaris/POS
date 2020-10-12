@@ -66,6 +66,6 @@ $lang["common_unknown"] = "Unknown";
 $lang["common_view_recent_sales"] = "View Recent Sales";
 $lang["common_website"] = "Website";
 $lang["common_welcome"] = "Welcome";
-$lang["common_welcome_message"] = "Welcome to OSPOS, click a module below to get started.";
+$lang["common_welcome_message"] = "Welcome to AS Electronics, click a module below to get started.";
 $lang["common_you_are_using_ospos"] = "You are using Open Source Point Of Sale version";
 $lang["common_zip"] = "Postal Code";

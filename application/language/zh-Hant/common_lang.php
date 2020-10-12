@@ -66,6 +66,6 @@ $lang["common_unknown"] = "不明";
 $lang["common_view_recent_sales"] = "最新的消售資訊";
 $lang["common_website"] = "網站";
 $lang["common_welcome"] = "歡迎";
-$lang["common_welcome_message"] = "歡迎使用OSPOS，請點擊下面的模組以開始使用.";
+$lang["common_welcome_message"] = "歡迎使用Tecnotronix，請點擊下面的模組以開始使用.";
 $lang["common_you_are_using_ospos"] = "您正在使用 Open Source Point Of Sale 版本";
 $lang["common_zip"] = "郵遞區號";

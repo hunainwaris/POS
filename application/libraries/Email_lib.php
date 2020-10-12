@@ -18,7 +18,7 @@ class Email_lib
 
 		$config = array(
 			'mailtype' => 'html',
-			'useragent' => 'OSPOS',
+			'useragent' => 'Tecnotronix',
 			'validate' => TRUE,
 			'protocol' => $this->CI->config->item('protocol'),
 			'mailpath' => $this->CI->config->item('mailpath'),

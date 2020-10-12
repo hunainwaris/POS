@@ -66,6 +66,6 @@ $lang["common_unknown"] = "Chưa biết";
 $lang["common_view_recent_sales"] = "Hiển thị những Bán hàng mới đây";
 $lang["common_website"] = "trang thông tin điện tử";
 $lang["common_welcome"] = "Chào mừng";
-$lang["common_welcome_message"] = "Chào mừng bạn đến với OSPOS, bấm chọn mô đun phía dưới để bắt đầu.";
+$lang["common_welcome_message"] = "Chào mừng bạn đến với Tecnotronix, bấm chọn mô đun phía dưới để bắt đầu.";
 $lang["common_you_are_using_ospos"] = "Bạn đang sử dụng Open Source Point Of Sale phiên bản";
 $lang["common_zip"] = "Mã bưu điện";

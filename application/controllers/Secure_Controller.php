@@ -92,7 +92,7 @@ class Secure_Controller extends CI_Controller
 		echo $result !== FALSE ? 'true' : 'false';
 	}
 
-	// this is the basic set of methods most OSPOS Controllers will implement
+	// this is the basic set of methods most Tecnotronix Controllers will implement
 	public function index() { return FALSE; }
 	public function search() { return FALSE; }
 	public function suggest_search() { return FALSE; }

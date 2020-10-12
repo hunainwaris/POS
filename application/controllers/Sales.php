@@ -512,6 +512,7 @@ class Sales extends Secure_Controller
 	{
 		$sale_id = $this->sale_lib->get_sale_id();
 		$sale_type = $this->sale_lib->get_sale_type();
+		$salesman = $this->input->post('Employee');
 		$data = array();
 		$data['dinner_table'] = $this->sale_lib->get_dinner_table();
 
@@ -523,7 +524,8 @@ class Sales extends Secure_Controller
 		$data['transaction_date'] = to_date($__time);
 		$data['show_stock_locations'] = $this->Stock_location->show_locations('sales');
 		$data['comments'] = $this->sale_lib->get_comment();
-		$employee_id = $this->Employee->get_logged_in_employee_info()->person_id;
+//		$employee_id = $this->Employee->get_logged_in_employee_info()->person_id;//check for users from db not from login
+		$employee_id = $salesman;//check for users from db not from login
 		$employee_info = $this->Employee->get_info($employee_id);
 		$data['employee'] = $employee_info->first_name . ' ' . mb_substr($employee_info->last_name, 0, 1);
 
@@ -633,7 +635,7 @@ class Sales extends Secure_Controller
 
 				// Save the data to the sales table
 				$data['sale_id_num'] = $this->Sale->save($sale_id, $data['sale_status'], $data['cart'], $customer_id, $employee_id, $data['comments'], $invoice_number, $work_order_number, $quote_number, $sale_type, $data['payments'], $data['dinner_table'], $tax_details);
-				$data['sale_id'] = 'POS ' . $data['sale_id_num'];
+				$data['sale_id'] = 'ASE ' . $data['sale_id_num'];
 
 				// Resort and filter cart lines for printing
 				$data['cart'] = $this->sale_lib->sort_and_filter_cart($data['cart']);
@@ -747,7 +749,7 @@ class Sales extends Secure_Controller
 
 			$data['sale_id_num'] = $this->Sale->save($sale_id, $data['sale_status'], $data['cart'], $customer_id, $employee_id, $data['comments'], $invoice_number, $work_order_number, $quote_number, $sale_type, $data['payments'], $data['dinner_table'], $tax_details);
 
-			$data['sale_id'] = 'POS ' . $data['sale_id_num'];
+			$data['sale_id'] = 'ASE ' . $data['sale_id_num'];
 
 			$data['cart'] = $this->sale_lib->sort_and_filter_cart($data['cart']);
 			$data = $this->xss_clean($data);
@@ -834,6 +836,7 @@ class Sales extends Secure_Controller
 
 	private function _load_customer_data($customer_id, &$data, $stats = FALSE)
 	{
+//		var_dump($customer_id);die();
 		$customer_info = '';
 
 		if($customer_id != -1)
@@ -851,6 +854,7 @@ class Sales extends Secure_Controller
 			$data['first_name'] = $customer_info->first_name;
 			$data['last_name'] = $customer_info->last_name;
 			$data['customer_email'] = $customer_info->email;
+			$data['customer_phone'] = $customer_info->phone_number;
 			$data['customer_address'] = $customer_info->address_1;
 			if(!empty($customer_info->zip) || !empty($customer_info->city))
 			{
@@ -949,7 +953,8 @@ class Sales extends Secure_Controller
 		$this->_load_customer_data($this->sale_lib->get_customer(), $data);
 
 		$data['sale_id_num'] = $sale_id;
-		$data['sale_id'] = 'POS ' . $sale_id;
+//		$data['sale_id'] = 'POS ' . $sale_id;
+		$data['sale_id'] = 'ASE '. $sale_id;
 		$data['comments'] = $sale_info['comment'];
 		$data['invoice_number'] = $sale_info['invoice_number'];
 		$data['quote_number'] = $sale_info['quote_number'];
@@ -1488,6 +1493,37 @@ class Sales extends Secure_Controller
 		}
 
 		return NULL;
+	}
+	public function get_all_employee_name()
+	{
+		//		$data=array();
+//		$all_user=$this->Employee->get_name_of_all_employees();
+//		$all_user=$this->Employee->get_all();
+//		$selected_user=array();
+		//		$all_users = $this->input->post('all_users');
+//		$this->sale_lib->set_mode($all_users);
+//		var_dump($all_users);die;
+//		foreach ($all_user as $user_name)
+//		{
+//
+//			$user_name['username'];
+////			$user_name['username'];
+////			return $all_user;
+////			var_dump($user_name['username']);
+//		}
+//		var_dump($data[$user_name['id']]);
+//		$infos = $this->input->post('infos');
+//		$infos = ['a','b','c'];
+//		$this->sale_lib->set_mode($infos = ['a','b','c']);
+
+//		var_dump($all_users);die();
+//		$data['username']=$all_users;
+//		return $all_users;
+
+//		$this->_reload($all_users);
+//		$user_data['user_info']=$all_user;
+//		$this->load->view('sales/register', $user_data);
+//		var_dump($all_user);
 	}
 }
 ?>

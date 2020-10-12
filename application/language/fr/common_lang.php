@@ -66,6 +66,6 @@ $lang["common_unknown"] = "Inconnu(e)";
 $lang["common_view_recent_sales"] = "Voir Ventes Récentes";
 $lang["common_website"] = "site-web";
 $lang["common_welcome"] = "Bienvenue";
-$lang["common_welcome_message"] = "Bienvenue à OSPOS, choisissez un module ci-dessous.";
+$lang["common_welcome_message"] = "Bienvenue à Tecnotronix, choisissez un module ci-dessous.";
 $lang["common_you_are_using_ospos"] = "Vous utilisez Open Source Point Of Sale Version";
 $lang["common_zip"] = "Zip";

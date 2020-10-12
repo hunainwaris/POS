@@ -13,7 +13,7 @@ class Config extends Secure_Controller
 	}
 
 	/*
-	 * This function loads all the licenses starting with the first one being OSPOS one
+	 * This function loads all the licenses starting with the first one being TecnoTronix one
 	 */
 	private function _licenses()
 	{
@@ -30,7 +30,7 @@ class Config extends Secure_Controller
 		}
 		else
 		{
-			$license[$i]['text'] = 'LICENSE file must be in OSPOS license directory. You are not allowed to use OSPOS application until the distribution copy of LICENSE file is present.';
+			$license[$i]['text'] = 'LICENSE file must be in Tecnotronix license directory. You are not allowed to use Tecnotronix application until the distribution copy of LICENSE file is present.';
 		}
 
 		$dir = new DirectoryIterator('license');	// read all the files in the dir license

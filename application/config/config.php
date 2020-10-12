@@ -8,7 +8,7 @@
 | 
 | 
 */ 
-$config['application_version'] = '3.4.0';
+$config['application_version'] = '3.4';
 
 /* 
 |-------------------------------------------------------------------------- 
@@ -19,11 +19,11 @@ $config['application_version'] = '3.4.0';
 | 
 | 
 */ 
-$config['commit_sha1'] = 'dev';
+$config['commit_sha1'] = 'final';
  
 /* 
 |-------------------------------------------------------------------------- 
-| Internal to OSPOS XSS Clean 
+| Internal to Tecnotronix XSS Clean
 |-------------------------------------------------------------------------- 
 | 
 | This is to indicated whether we want XSS clean to be performed or not 
@@ -358,7 +358,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = getenv('ENCRYPTION_KEY') ? getenv('ENCRYPTION_KEY') : '';
+$config['encryption_key'] = getenv('ENCRYPTION_KEY') ? getenv('ENCRYPTION_KEY') : 'f4b3672dbe6b0e994a316c7f673d20ac5332c1ee6f96c4882765f0c041df3256';
 
 /*
 |--------------------------------------------------------------------------

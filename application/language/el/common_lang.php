@@ -66,6 +66,6 @@ $lang["common_unknown"] = "Άγνωστο";
 $lang["common_view_recent_sales"] = "Εμφάνιση Πρόσφατων Πωλήσεων";
 $lang["common_website"] = "Ιστοσελίδα";
 $lang["common_welcome"] = "Καλωσήρθατε";
-$lang["common_welcome_message"] = "Καλωσορίσατε στο OSPOS, επιλέξτε μια από τις παρακάτω ενότητες για να ξεκινήσετε.";
+$lang["common_welcome_message"] = "Καλωσορίσατε στο Tecnotronix, επιλέξτε μια από τις παρακάτω ενότητες για να ξεκινήσετε.";
 $lang["common_you_are_using_ospos"] = "Χρησιμοποιείτε την Open Source Point Of Sale έκδοση";
 $lang["common_zip"] = "Ταχ.Κωδικας";
