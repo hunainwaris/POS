@@ -610,6 +610,15 @@ class Sale_lib
 	{
 		$this->CI->session->set_userdata('sales_mode', $mode);
 	}
+    public function get_user_data()
+    {
+        return $this->CI->session->userdata('salesman');
+    }
+	public function set_user_data($salesman)
+	{
+		$this->CI->session->set_userdata('salesman', $salesman);
+	}
+
 
 	public function clear_mode()
 	{

@@ -30,7 +30,16 @@ if(isset($success))
 				<li class="pull-left">
 					<?php echo form_dropdown('mode', $modes, $mode, array('onchange'=>"$('#mode_form').submit();", 'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
 <!--                    --><?php //echo form_dropdown('all_users', $all_users, array(), array()); ?>
-				</li>
+<!--                    --><?php //echo form_dropdown('salesman', $this->Employee->get_name_of_all_employees(), $salesman, array('onchange'=>"$('#mode_form').submit();",'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
+<!--                    <select name="salesman" class="selectpicker show-menu-arrow" onchange="$('#mode_form').submit();">-->
+<!--                        --><?php //foreach ($this->Employee->get_name_of_all_employees() as $salesman ):
+//                            {?>
+<!--                                <option value="--><?//=$salesman['person_id'];?><!--">--><?//=$salesman['username'];?><!--</option>-->
+<!--                            --><?php //} ?>
+<!--                        --><?php // endforeach;?>
+<!--                    </select>-->
+                </li>
+
 				<?php
 				if($this->config->item('dinner_table_enable') == TRUE)
 				{
@@ -78,12 +87,19 @@ if(isset($success))
 		</div>
 	<?php echo form_close(); ?>
 
-    <?php echo form_open($controller_name."/complete", array('id'=>'select_user', 'class'=>'form-horizontal panel panel-default')); ?>
+    <?php echo form_open($controller_name."/get_all_employee_name", array('id'=>'select_user', 'class'=>'form-horizontal panel panel-default')); ?>
 <!--    <ul>-->
 <!--    <li>-->
 <!--        --><?php //echo form_dropdown('mode', $modes, $mode, array('onchange'=>"$('#mode_form').submit();", 'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
-        <?php echo form_dropdown('Employee', $this->Employee->get_name_of_all_employees(), $salesman, array('onchange'=>"$('#mode_form').submit();",'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
+<!--        --><?php //echo form_dropdown('salesman', $this->Employee->get_name_of_all_employees()[]['username'], $salesman, array('onchange'=>"$('#mode_form').submit();",'class'=>'selectpicker show-menu-arrow', 'data-style'=>'btn-default btn-sm', 'data-width'=>'fit')); ?>
     <?php echo form_close(); ?>
+<!--    <select name="salesman" class="selectpicker show-menu-arrow" onchange="$('#mode_form').submit();">-->
+<!--    --><?php //foreach ($this->Employee->get_name_of_all_employees() as $salesman ):
+//        {?>
+<!--    <option value="--><?//=$salesman['person_id'];?><!--">--><?//=$salesman['username'];?><!--</option>-->
+<!--    --><?php //} ?>
+<!--    --><?php // endforeach;?>
+<!--    </select>-->
 <!--    --><?php //var_dump($this->Employee->get_name_of_all_employees());die(); ?>
 	<?php $tabindex = 0; ?>
 
@@ -521,7 +537,14 @@ if(isset($success))
 								</td>
 							</tr>
 						</table>
-					<?php echo form_close(); ?>
+                    <select name="salesman" class="selectpicker show-menu-arrow" >
+                        <?php foreach ($this->Employee->get_name_of_all_employees() as $salesman ):
+                            {?>
+                                <option value="<?=$salesman['person_id'];?>"><?=$salesman['username'];?></option>
+                            <?php } ?>
+                        <?php  endforeach;?>
+                    </select>
+                    <?php echo form_close(); ?>
 
 					<div class='btn btn-sm btn-success pull-right' id='add_payment_button' tabindex="<?php echo ++$tabindex; ?>"><span class="glyphicon glyphicon-credit-card">&nbsp</span><?php echo $this->lang->line('sales_add_payment'); ?></div>
 				<?php
@@ -661,6 +684,7 @@ if(isset($success))
 		<?php
 		}
 		?>
+
 	</div>
 </div>
 

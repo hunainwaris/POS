@@ -266,7 +266,9 @@ class Sales extends Secure_Controller
 	public function add_payment()
 	{
 		$data = array();
-
+        $salesman=$this->input->post('salesman');
+        $this->sale_lib->set_user_data($salesman);
+//        var_dump($this->sale_lib->get_user_data());die;
 		$payment_type = $this->input->post('payment_type');
 		if($payment_type != $this->lang->line('sales_giftcard'))
 		{
@@ -510,9 +512,12 @@ class Sales extends Secure_Controller
 
 	public function complete()
 	{
+//        $salesman=$this->input->post('salesman');
+//        var_dump($this->sale_lib->get_user_data());die;
 		$sale_id = $this->sale_lib->get_sale_id();
 		$sale_type = $this->sale_lib->get_sale_type();
-		$salesman = $this->input->post('Employee');
+
+//		$salesman = $this->input->post('Employee');
 		$data = array();
 		$data['dinner_table'] = $this->sale_lib->get_dinner_table();
 
@@ -525,7 +530,7 @@ class Sales extends Secure_Controller
 		$data['show_stock_locations'] = $this->Stock_location->show_locations('sales');
 		$data['comments'] = $this->sale_lib->get_comment();
 //		$employee_id = $this->Employee->get_logged_in_employee_info()->person_id;//check for users from db not from login
-		$employee_id = $salesman;//check for users from db not from login
+		$employee_id = $this->sale_lib->get_user_data();//check for users from db not from login
 		$employee_info = $this->Employee->get_info($employee_id);
 		$data['employee'] = $employee_info->first_name . ' ' . mb_substr($employee_info->last_name, 0, 1);
 
@@ -1494,8 +1499,16 @@ class Sales extends Secure_Controller
 
 		return NULL;
 	}
-	public function get_all_employee_name()
+	public function get_selected_employee_id()
 	{
+//        $allsalesman=$this->Employee->get_name_of_all_employees();
+
+//		$salesman = $this->input->post('salesman');
+//		var_dump($salesman);
+//		return $salesman;
+//	    var_dump($salesman);die();
+//		$this->sale_lib->set_user_data($salesman);
+//		$this->sale_lib->set_mode($mode);
 		//		$data=array();
 //		$all_user=$this->Employee->get_name_of_all_employees();
 //		$all_user=$this->Employee->get_all();
